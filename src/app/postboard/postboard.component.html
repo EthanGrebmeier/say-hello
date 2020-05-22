@@ -1,0 +1,111 @@
+<body>
+
+    <ng-template [ngIf]="loading" [ngIfElse]="loaded" >
+        <div style="display: flex; justify-content: center;" >
+            <img src="../../assets/gif-loading.gif" style="width: 500px; height: 500px; margin-top: 5vh; align-items: center;">
+         </div>
+        
+    </ng-template>
+
+
+    <ng-template #loaded>
+        <div class = "postHolder">
+
+            <div [@fade]="subPostArray1.length" class="row row1">
+                <div class="post"  [ngStyle] = "postColor(post)" *ngFor="let post of subPostArray1">
+        
+                    <div class="text-col">
+                        <div class="message-content"> {{ post.message }} </div>
+                        <div class="name-date">
+                            <div class="name-content"> - {{ post.name }}</div>
+                            <div class="date-content"> {{ post.posted }} </div>
+                        </div>
+                    </div>
+                
+                    <div class="emoji-col">
+                        <div class="emoji-content"> {{ post.emoji }} </div>
+                    </div>
+                
+                </div>
+            </div>
+            
+        
+            <div [@fade]="subPostArray1.length" class="row row2">
+                <div class="post" [ngStyle] = "postColor(post)" *ngFor="let post of subPostArray2" >
+        
+                    <div class="text-col">
+                        <div class="message-content"> {{ post.message }} </div>
+                        <div class="name-date">
+                            <div class="name-content"> - {{post.name}}</div>
+                            <div class="date-content"> {{ post.posted }} </div>
+                        </div>
+                    </div>
+                
+                    <div class="emoji-col">
+                        <div class="emoji-content"> {{ post.emoji }} </div>
+                    </div>
+                
+                </div>
+            </div>
+        
+            <div [@fade]="subPostArray1.length" class="row row3">
+                <div class="post" [ngStyle] = "postColor(post)" *ngFor="let post of subPostArray3">
+        
+                    <div class="text-col">
+                        <div class="message-content"> {{ post.message }} </div>
+                        <div class="name-date">
+                            <div class="name-content"> - {{post.name}}</div>
+                            <div class="date-content"> {{ post.posted }} </div>
+                        </div>
+                    </div>
+                
+                    <div class="emoji-col">
+                        <div class="emoji-content"> {{ post.emoji }} </div>
+                    </div>
+                
+                </div>
+            </div>
+        
+            <div [@fade]="subPostArray1.length" class="row row4">
+                <div class="post" [ngStyle] = "postColor(post)" *ngFor="let post of subPostArray4">
+        
+                    <div class="text-col">
+                        <div class="message-content"> {{ post.message }} </div>
+                        <div class="name-date">
+                            <div class="name-content"> - {{post.name}}</div>
+                            <div class="date-content"> {{ post.posted }} </div>
+                        </div>
+                    </div>
+                
+                    <div class="emoji-col">
+                        <div class="emoji-content"> {{ post.emoji }} </div>
+                    </div>
+                
+                </div>
+            </div>
+        
+            <div [@fade]="subPostArray1.length" class="row row5">
+                <div class="post" [ngStyle] = "postColor(post)" *ngFor="let post of subPostArray5">
+        
+                    <div class="text-col">
+                        <div class="message-content"> {{ post.message }} </div>
+                        <div class="name-date">
+                            <div class="name-content"> - {{post.name}}</div>
+                            <div class="date-content"> {{ post.posted }} </div>
+                        </div>
+                    </div>
+                
+                    <div class="emoji-col">
+                        <div class="emoji-content"> {{ post.emoji }} </div>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+    </ng-template>
+    
+</body>
+
+
+
+

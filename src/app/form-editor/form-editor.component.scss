@@ -1,0 +1,441 @@
+
+$primary-color: #8FBFE0;
+html{
+    max-height: 100%;
+    
+}
+
+body{
+    
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: 100% 100%;
+    max-height: 100%;
+    background: $primary-color;
+    font-family: 'Hammersmith One', sans-serif;
+}
+
+
+.title{
+    margin-top: 0vh;
+    margin-bottom: 3.7vh;
+    font-size: 10vw;
+    color: white;
+    text-shadow: -.4vw .4vw #000000;
+    
+    text-align: center;
+}
+
+app-post-board{
+    align-self: center;
+}
+
+footer{
+    font-family: 'Hammersmith One', sans-serif;
+    color: white;
+    font-size: 1.4vw;
+    width: 100vw;
+    text-align: center;
+    border-top: .5vh solid white;
+}
+
+br{
+    display: none;
+}
+
+.controls{
+    align-self: center;
+    display: flex;
+
+}
+
+.change-view{
+
+    margin-right: 1vw;
+    margin-left: 1vw;
+    display: inline-block;
+    text-align: center;
+    width: 14vw;
+    height: 6.4vh;
+    color: #fffffffd;
+    background-color: transparent;
+    border: solid .3vw white;
+
+    cursor: pointer;
+
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 2vw;
+
+    transition: color 300ms, background 300ms;
+
+    &:hover{
+        background-color: white;
+        color: $primary-color; 
+
+        transition: color 300ms, background 300ms;
+    }
+}
+
+.modal{
+    margin-top: 2vh;
+}
+
+.modalsNotShow{
+    display: none;
+}
+
+.modalShow{
+    display: block;
+    line-height: normal;
+    position: fixed;
+    z-index: 1;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    left: 0;
+    top: 0;
+    width: 60vw;
+    max-width: 100%;
+    word-break: break-word;
+}
+
+.modalContent{
+    color: white;
+    font-size: 2vw;
+    background: #df6464b7;
+    text-align: center;  
+}
+
+.preview{
+    margin-top: 1vw;
+    margin-bottom: 0vw;
+}
+
+.aboutView{
+    margin-top: 2vh;
+    font-size: 2vw;
+    text-align: center;
+    width: 70vw;
+    height: 60vh;
+    color: white;
+    background-color: rgba(124, 119, 185, 0.555);
+    h3{
+        font-size: 4vw;
+        margin-top: .5vh;
+        margin-bottom: .5vw;
+        text-shadow: -.3vw .3vw #000000;
+    }
+}
+
+form{
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 2vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    height: 40.8vh;
+
+    input{
+        background: none;
+        border: none;
+        border-bottom: .1vw solid white;
+    }
+
+    select{
+        background: none;
+        border: .1vw solid white;
+    }
+    
+    label{
+        color: black;
+        align-self: flex-start;
+        font-size: 1.2vw;
+        font-family: 'Hammersmith One', sans-serif;
+        font-weight: bold;
+        padding-bottom: .3vh;
+    }
+
+    .message {
+        text-align: left;
+    }
+
+    .messageForm{
+        height: 5vh;
+        width: 30vw;
+        font-size: 2vw;
+        margin-bottom: 1vw;
+        padding-bottom: .2vw;
+        align-self: left;
+        
+    }
+
+    .name-color-row{
+        display: flex;
+        align-content: space-between;
+        justify-content: flex-start;
+    }
+
+    .name{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nameForm{
+        height: 5vh;
+        width: 10vw;
+        font-size: 2vw;
+        margin-bottom: 1vw;
+    }
+
+    .color{
+        display: flex;
+        flex-direction: column;
+        margin-left: 3vw;
+    }
+
+    .colorForm{
+        margin-top: 0vw;
+        height: 5.2vh;
+        width: 10vw;
+        font-size: 2vw;
+    }
+
+    .emoji{
+        display: flex;
+        flex-direction: column;
+        margin-left: 2vw;
+    }
+
+    .emojiForm{
+        margin-top: 0vw;
+        height: 5.2vh;
+        width: 4.9vw;
+        font-size: 1.9vw;
+    }
+
+    .submit{
+        align-self: flex-start;
+        margin-top: 2vw;
+        margin-bottom: 1.3vw;
+
+        display: inline-block;
+        align-self: center;
+        text-align: center;
+        width: 11vw;
+        height: 4.5vw;
+        color: #fffffffd;
+        background-color: transparent;
+        border: solid .3vw white;
+    
+        cursor: pointer;
+    
+        font-family: 'Hammersmith One', sans-serif;
+        font-size: 3vw;
+    
+        transition: color 300ms, background 300ms;
+
+        &:hover{
+            background-color: white;
+            color: $primary-color; 
+
+            transition: color 300ms, background 300ms;
+        }
+    }
+}
+
+@media(max-width: 999px){
+
+    body{
+        height: 240vh;
+    }
+
+    .controls{
+        margin-bottom: 5vh;
+    }
+    .change-view{
+        margin-right: 1vw;
+        margin-left: 1vw;
+        display: inline-block;
+        text-align: center;
+        width: 33vw;
+        height: 4vh;
+        color: #fffffffd;
+        background-color: transparent;
+        border: solid .3vw white;
+    
+        cursor: pointer;
+    
+        font-family: 'Hammersmith One', sans-serif;
+        font-size: 4vw;
+    
+        transition: color 300ms, background 300ms;
+    
+        &:hover{
+            background-color: white;
+            color: $primary-color; 
+    
+            transition: color 300ms, background 300ms;
+        }
+    }
+
+    .modalContent{
+        color: white;
+        font-size: 4vw;
+        background: #df6464b7;
+        text-align: center;  
+    }
+
+    .aboutView{
+
+        font-size: 5.2vw;
+        text-align: center;
+        width: 93vw;
+        height: 65vh;
+        color: white;
+        margin-bottom: 11vh;
+        h3{
+            font-size: 11vw;
+            margin-top: .5vh;
+            margin-bottom: 8.5vh;
+            text-shadow: -.5vw .5vw #000000;
+        }
+    }
+
+    form{
+        font-family: 'Hammersmith One', sans-serif;
+        font-size: 4vw;
+        padding-top: 1vw;
+        padding-bottom: 14vh;
+        text-align: center; 
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+        width: 67vw;
+        height: 35vh;
+        margin-top: 5vh;
+        
+    
+        input{
+            background: none;
+            border: none;
+            border-bottom: .1vw solid white;
+        }
+    
+        select{
+            background: none;
+            border: .1vw solid white;
+        }
+        
+        label{
+            color: black;
+            align-self: flex-start;
+            font-size: 5vw;
+            font-family: 'Hammersmith One', sans-serif;
+            font-weight: bold;
+            padding-bottom: .3vh;
+        }
+    
+        .message {
+            text-align: left;
+        }
+    
+        .messageForm{
+            height: 5vh;
+            width: 72vw;
+            font-size: 5vw;
+            margin-bottom: 1vw;
+            padding-bottom: .2vw;
+            align-self: left;
+            
+        }
+    
+        .name-color-row{
+            display: flex;
+            align-content: space-between;
+            justify-content: flex-start;
+        }
+    
+        .name{
+            display: flex;
+            flex-direction: column;
+        }
+    
+        .nameForm{
+            height: 5vh;
+            width: 30vw;
+            font-size: 5vw;
+            margin-bottom: 1vw;
+        }
+    
+        .color{
+            display: flex;
+            flex-direction: column;
+            margin-left: 3vw;
+            label{
+                margin-bottom: .5vh;
+            }
+        }
+    
+        .colorForm{
+            margin-top: 0vw;
+            height: 5.2vh;
+            width: 18vw;
+            font-size: 4vw;
+        }
+    
+        .emoji{
+            display: flex;
+            flex-direction: column;
+            margin-left: 2vw;
+            label{
+                margin-bottom: .5vh;
+            }
+        }
+        
+    
+        .emojiForm{
+            
+            height: 5.2vh;
+            width: 15vw;
+            font-size: 3.9vw;
+        }
+    
+        .submit{
+            align-self: flex-start;
+            margin-top: 5vw;
+            margin-bottom: 1.3vw;
+            
+    
+            display: inline-block;
+            align-self: center;
+            text-align: center;
+            width: 50vw;
+            height: 9vh;
+            color: #fffffffd;
+            background-color: transparent;
+            border: solid .3vw white;
+        
+            cursor: pointer;
+        
+            font-family: 'Hammersmith One', sans-serif;
+            font-size: 8vw;
+        
+            transition: color 300ms, background 300ms;
+    
+            &:hover{
+                background-color: white;
+                color: $primary-color; 
+    
+                transition: color 300ms, background 300ms;
+            }
+        }
+    }
+
+    footer{
+        font-size: 3vw;
+    }
+}

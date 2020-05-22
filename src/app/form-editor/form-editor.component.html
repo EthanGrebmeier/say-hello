@@ -1,0 +1,110 @@
+<body>
+
+    <h1 class="title"> Say Hello! </h1>
+
+
+    <div class="controls">
+        <button class="change-view" (click)="changeViewPostBoard()"> {{ viewStatus }} </button>
+        <button class="change-view" (click)="changeViewAbout()"> {{ aboutStatus }} </button>
+    </div>
+
+    <ng-template [ngIf]="formView"  class="form-preview">
+
+        <div id="infoModal" class="modal"  [ngClass]="modalClass()">
+            <div class="modalContent">
+
+                {{ modalContent }}
+                
+                <div>
+                    <br/>
+                    {{ modalContent2 }} 
+                </div>
+
+            </div>
+
+        </div>
+        
+        <div class="preview">
+            <h2 class="previewLabel"> Preview: </h2>
+            <app-post-render [message]="message" [name]="name" [color]="color" [emoji]="emoji"></app-post-render>
+        </div>
+
+        
+    
+        <form [formGroup]="messageWhole" (ngSubmit)="onSubmit()"  >
+            <div class="message">
+                <label> Message*: </label>
+                <input type="text" formControlName="message" class="messageForm" placeholder="Sample Message" [(ngModel)]="message" required maxlength="18">
+            </div>
+            
+        
+            <div class="name-color-row">
+        
+                <div class="name">
+                    <label> Name: </label> 
+                    <input type="text" formControlName="name"  class="nameForm" [(ngModel)]="name" maxlength="15">
+                </div>
+                
+                <div class="color">
+                    <label> Color: </label> 
+        
+                    <select formControlName="color" class="colorForm" [(ngModel)]="color"> 
+                    <option value="#2b95dbcc"> Blue </option>
+                    <option value="#2bdb7afb"> Green </option>
+                    <option value="#dbbb2bfb"> Orange </option>
+                    <option value="#ec87c5bb"> Pink </option>
+                    <option value="#db2b60fb"> Red </option>
+                    <option value="#C0BE4b"> Yellow </option>
+                    </select>
+        
+                </div>
+        
+                <div class="emoji">
+                    <label> Emoji: </label> 
+        
+                    <select formControlName="emoji" class="emojiForm" [(ngModel)]="emoji"> 
+                    <option value=""> N/A </option> 
+                    <option value="😀"> 😀 </option>
+                    <option value="😂"> 😂 </option>
+                    <option value="👍"> 👍 </option>
+                    <option value="🐶"> 🐶 </option>
+                    <option value="🐱"> 🐱 </option>
+                    <option value="💯"> 💯 </option>
+                    <option value="🏳️‍🌈"> 🏳️‍🌈 </option>
+                    <option value="❤️"> ❤️ </option>
+                    </select>
+        
+                </div>
+        
+            </div>
+            
+        
+            <button type="submit" class="submit" [disabled]="!messageWhole.valid" > Submit </button>
+        
+        
+        </form>
+    </ng-template>
+    
+    <ng-template [ngIf]="boardView">
+        <ng-template [ngIf]="successfulPost">
+            <div class="preview" style="align-self: center; border: #88eb17 solid 4px;">
+                <app-post-render [message]="postedMessage" [name]="postedName" [color]="postedColor" [emoji]="postedEmoji"></app-post-render>
+            </div>
+        </ng-template>
+        <app-post-board></app-post-board>
+    </ng-template>
+
+    <ng-template [ngIf]="aboutView" >
+        <div class="aboutView" [@fade]="3"> 
+            <h3> About 'Say Hello' </h3>
+            <p> Say Hello is a web application for creating and sharing 'Hellos'.</p>
+            <p> Share your message and view other people's, randomly selected without the bias of likes or shares! </p>
+            <p> Say Hello is built on the MEAN Stack <br/> (Mongo, Express, Angular, and Node) </p>
+            <p> V1.0 Released 5/8/2020</p>
+        </div>
+    </ng-template>
+    <footer>Copyright 2020© Ethan Grebmeier</footer>
+</body>
+
+
+
