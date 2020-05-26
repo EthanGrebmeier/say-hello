@@ -63,35 +63,8 @@ export class PostBoardComponent implements OnInit {
     this.subArrays.push(this.subPostArray3);
     this.subArrays.push(this.subPostArray4);
     this.subArrays.push(this.subPostArray5);
-
-
     this.postArray = [];
     await this.getAllPosts();
-    
-    
-    if(this.postArray.length == 0){
-    
-      setTimeout(() => {
-
-        if(this.postArray.length != 0){
-          console.log(this.postArray);
-          this.loading = false;
-          this.splitPosts();
-          for (let i = 0; i < this.subArrays.length; i++){
-            let j = this.subArrays[i].length; 
-            while(this.subArrays[i].length < 5){
-              this.subArrays[i][j] = this.placeHolder;
-              j++;
-            }
-          }
-        }
-       
-        else{
-          this.loader() 
-        }
-        
-      }, 2000); 
-    }
     
   }
 
@@ -109,10 +82,12 @@ export class PostBoardComponent implements OnInit {
       posts.forEach(post => { 
         this.postArray.push(post);
       });
+      this.splitPosts();
     });
   }
 
   splitPosts(){
+    this.loading = false; 
     console.log("Array: " + this.postArray);
     console.log("Length: "+ this.postArray.length);
     for (let post = 0; post < this.postArray.length ; post++){
