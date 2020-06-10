@@ -3,33 +3,53 @@
     display: flex;
     background: #C0BE4b;
     border: #ffffff solid 2px;
-    width: 29vw;
-    height: 5vw;
+    width: 34rem;
+    height: 7rem;
     padding-left: 1vw;
     color: white;
 
     .message-content{
-        font-size: 2.4vw;
-        width: 24vw;
-        height: 3vw;
+        margin-top: .3rem;
+        font-size: 2.3rem;
+        width: 28rem;
+        height: 3rem;
+        margin-bottom: .7rem;
+
+    }
+
+    .name-date{
+        width: 20rem;
+        display: flex;
+        
     }
 
     .name-content{
-        font-size: 1.5vw;
-        margin-left: .27vw;
+        width: 17rem;
+        font-size: 2rem;
+        margin-left: .27rem
+    }
+
+    .date-content{
+        width: 3rem;
+        font-size: 2rem;
     }
 
     .emoji-col{
         justify-self: flex-end;
+        display: flex;
+        justify-content: center;
+        width: 6rem;
+
     }
 
     .emoji-content{
-        font-size: 3.3vw;
+        margin-top: .3rem;
+        font-size: 4rem;
     }
 
 }
 
-@media (max-width: 700px){
+@media (max-width: 1024px){
     .post{
         flex-basis: auto;
     
@@ -41,39 +61,43 @@
     
         
         color: white;
-        width: 70vw;
-        height: 7vh;
+        width: 20rem;
+        height: 4rem;
     
         .message-content{
-            font-size: 6vw;
-            width: 55vw;
-            margin-bottom: 1.8vh;
+            font-size: 1.2rem;
+            height: 2rem;
+            width: 16.2rem;
+
+            margin-top: .2rem;
+            margin-bottom: .2rem;
+            margin-left: .3rem;
         }
     
         .name-date{
             display: flex;
             flex-direction: row;
-            width: 55vw;
-            
-            
+            width: 16rem;
+            margin-left: .3rem;
+
         }
     
         .name-content{
             display: flex;
-            width: 50vw;
+            width: 11.8rem;
             
-            margin-left: .27vw;
-            font-size: 5vw;
+            margin-left: .1rem;
+            font-size: 1.1rem;
         }
     
         .date-content{
-            width: 60vw;
-            font-size: 3.5vw;
+            width: 6rem;
+            font-size: 1.1rem;
         }
     
         .emoji-col{
     
-            width: 8vw;
+            width: 3rem;
             //margin-bottom: 2vw;
             justify-self: flex-end;
             margin-top: 0vh;
@@ -81,7 +105,7 @@
         }
     
         .emoji-content{
-            font-size: 9vw;
+            font-size: 2.6rem;
             
         }
     
