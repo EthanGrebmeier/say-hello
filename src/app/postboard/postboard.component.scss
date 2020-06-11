@@ -1,3 +1,5 @@
+$font1: 'Montserrat', sans-serif;
+
 @media (min-width: 1025px){
     body{
         width: 80vw;
@@ -11,7 +13,7 @@
     
     .postHolder{
         margin-top: 1vh;
-        margin-bottom: 3rem;
+        margin-bottom: 0rem;
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
@@ -59,7 +61,7 @@
     
     
     .post{
-        font-family: 'Hammersmith One', sans-serif;
+        font-family: $font1;
         display: flex;
         background: #C0BE4b;
         border: #ffffff solid 2px;
@@ -71,7 +73,7 @@
     
         .message-content{
             margin-top: .3rem;
-            font-size: 2.3rem;
+            font-size: 2rem;
             width: 28rem;
             height: 3rem;
             margin-bottom: .7rem;
@@ -86,13 +88,13 @@
     
         .name-content{
             width: 17rem;
-            font-size: 2rem;
+            font-size: 1.6rem;
             margin-left: .27rem
         }
     
         .date-content{
             width: 3rem;
-            font-size: 2rem;
+            font-size: 1.6rem;
         }
     
         .emoji-col{
@@ -136,7 +138,7 @@
     .post{
         flex-basis: auto;
     
-        font-family: 'Hammersmith One', sans-serif;
+        font-family: $font1;
         display: flex;
         background: #C0BE4b;
         border: #ffffff solid 2px;

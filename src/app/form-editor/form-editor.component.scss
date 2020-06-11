@@ -1,5 +1,9 @@
 
 $primary-color: #8FBFE0;
+
+$font1: 'Montserrat', sans-serif;
+
+
 html{
     max-height: 100%;
 }
@@ -30,8 +34,14 @@ footer{
     background-color: $primary-color;
 }
 
-
+body{
     
+    display: flex;
+    flex-direction: column;
+    background-size: 100% 100%;
+    height: 100%;
+    max-height: 100%;
+}
 
 .postBoard{
     height: 67.4vh;
@@ -52,7 +62,7 @@ footer{
 }
 
 .postAbout{
-    height: 100%;
+    height: 63.1vh;
 }
 
 br{
@@ -80,7 +90,7 @@ br{
 
     cursor: pointer;
 
-    font-family: 'Hammersmith One', sans-serif;
+    font-family: $font1;
     font-size: 1.7rem;
 
     transition: color 300ms, background 300ms;
@@ -134,22 +144,26 @@ br{
 
 .aboutView{
     margin-top: 2vh;
-    font-size: 1.3rem;
+    margin-bottom: .7rem;
+    font-size: 2.3rem;
     text-align: center;
     width: 70vw;
-    height: 61vh;
+    height: 60vh;
     color: white;
     background-color: rgba(124, 119, 185, 0.555);
+    font-family: $font1;
+
     h3{
-        font-size: 4vw;
+        font-family: 'Hammersmith One', sans-serif;
+        font-size: 4rem;
         margin-top: .5vh;
         margin-bottom: .5vh;
-        text-shadow: -.3vw .3vw #000000;
+        text-shadow: -.3vh .3vh #000000;
     }
 }
 
 form{
-    font-family: 'Hammersmith One', sans-serif;
+    font-family: $font1;
     font-size: 2vw;
     padding-top: 1vh;
     padding-bottom: 1vh;
@@ -176,7 +190,7 @@ form{
         color: black;
         align-self: flex-start;
         font-size: 1.2rem;
-        font-family: 'Hammersmith One', sans-serif;
+        font-family: $font1;
         font-weight: bold;
         padding-bottom: .3vh;
     }
@@ -256,7 +270,7 @@ form{
     
         cursor: pointer;
     
-        font-family: 'Hammersmith One', sans-serif;
+        font-family: $font1;
         font-size: 2rem;
     
         transition: color 300ms, background 300ms;
@@ -276,6 +290,7 @@ form{
         margin-top: 2rem;
         font-size: 4rem;
     }
+
 
     .postBoard{
         height: 100%;
@@ -311,7 +326,7 @@ form{
     
         cursor: pointer;
     
-        font-family: 'Hammersmith One', sans-serif;
+        font-family: $font1;
         font-size: 1.2rem;
     
         transition: color 300ms, background 300ms;
@@ -345,23 +360,23 @@ form{
 
     .aboutView{
 
-        font-size: 4.8vw;
+        font-size: 2rem;
         text-align: center;
         width: 93vw;
         height: 62vh;
         color: white;
         margin-bottom: 10.5vh;
         h3{
-            font-size: 11vw;
+            font-size:3rem;
             margin-top: .5vh;
             margin-bottom: 8.5vh;
-            text-shadow: -.5vw .5vw #000000;
+            text-shadow: -.5vh .5vh #000000;
         }
     }
 
     form{
         
-        font-family: 'Hammersmith One', sans-serif;
+        font-family: $font1;
         font-size: 4vw;
         padding-top: 1vw;
         padding-bottom: 14vh;
@@ -389,7 +404,7 @@ form{
             color: black;
             align-self: flex-start;
             font-size: 1.2rem;
-            font-family: 'Hammersmith One', sans-serif;
+            font-family: $font1;
             font-weight: bold;
             padding-bottom: .3vh;
         }
@@ -476,7 +491,7 @@ form{
         
             cursor: pointer;
         
-            font-family: 'Hammersmith One', sans-serif;
+            font-family: $font1;
             font-size: 2.6rem;
         
             transition: color 300ms, background 300ms;
@@ -489,6 +504,4 @@ form{
             }
         }
     }
-
-    
 }

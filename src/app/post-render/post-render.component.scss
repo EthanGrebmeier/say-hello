@@ -1,16 +1,19 @@
+$font1: 'Montserrat', sans-serif;
+
 .post{
-    font-family: 'Hammersmith One', sans-serif;
+    font-family: $font1;
     display: flex;
     background: #C0BE4b;
     border: #ffffff solid 2px;
     width: 34rem;
     height: 7rem;
     padding-left: 1vw;
+
     color: white;
 
     .message-content{
         margin-top: .3rem;
-        font-size: 2.3rem;
+        font-size: 2rem;
         width: 28rem;
         height: 3rem;
         margin-bottom: .7rem;
@@ -25,13 +28,13 @@
 
     .name-content{
         width: 17rem;
-        font-size: 2rem;
+        font-size: 1.6rem;
         margin-left: .27rem
     }
 
     .date-content{
         width: 3rem;
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
 
     .emoji-col{
